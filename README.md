@@ -1,77 +1,77 @@
-# bridge
+# Event Registration System
 
-An event registration system for ClojureBridge. [Read the blog post](https://www.stuttaford.me/2018/02/18/a-clojure-learning-journey/).
+A web-based Event Registration System that allows users to register for events, manage registrations, and organize event information through a simple and user-friendly interface.
 
-Dev diary:
+## Features
 
-- [Bridge dev diary: Datomic mode](https://www.stuttaford.me/2018/03/03/bridge-dev-diary--datomic-mode/) — 3 March, 2018
-- [Bridge dev diary: Modelling access](https://www.stuttaford.me/2018/03/17/bridge-dev-diary--modelling-access/) — 17 March, 2018
-- [Bridge dev diary: Events API](https://www.stuttaford.me/2018/03/31/bridge-dev-diary--events-api/) — 31 March, 2018
-- [Bridge dev diary: Events UI](https://www.stuttaford.me/2018/04/28/bridge-dev-diary--events-ui/) — 28 April, 2018
-- [Bridge dev diary: Events UI — Paying some tech debt](https://www.stuttaford.me/2018/05/05/bridge-dev-diary--events-ui-paying-some-tech-debt/) — 5 May, 2018
+- User Registration
+- Event Management
+- Secure Login System
+- View Registered Events
+- Responsive User Interface
 
-## Development
+## Technologies Used
 
-Install the [Clojure CLI](https://clojure.org/guides/getting_started), clone this repo.
+- Clojure
+- ClojureScript
+- Datomic
+- HTML
+- CSS
+- JavaScript
 
-### Try it out
+## Prerequisites
 
-To build the Cljs and run the web server:
+Before running the project, install:
 
-```shell
+- Java JDK
+- Clojure CLI
+- Make
+
+## Installation
+
+### Clone the repository
+
+```bash
+git clone https://github.com/Ramaposina/EventRegistrationSystem.git
+cd EventRegistrationSystem
+```
+
+### Run the project
+
+```bash
 make compile serve
 ```
 
-Visit http://localhost:8080, and sign in with `test@cb.org` / `secret`.
+Open your browser and visit:
 
-### Interactive development with the REPL and Figwheel
-
-I use Emacs, [CIDER](https://github.com/clojure-emacs/cider), and [clj-refactor](https://github.com/clojure-emacs/clj-refactor.el), so I assume that you have `cider-refresh` available to you.
-
-```shell
-make figwheel
+```
+http://localhost:8080
 ```
 
-Once it's running, connect CIDER to port `7890`, and issue a `cider-refresh` (`C-c C-x`) to start the system.
+## Test Credentials
 
-### Run tests
+Email:
 
-```sh
-make test
+```
+test@cb.org
 ```
 
-### Package for production
+Password:
 
-```sh
-make pack
+```
+secret
 ```
 
-And then run the jar:
+## Project Structure
 
-```sh
-java -jar bridge.jar -m bridge.service
 ```
-
-### Database
-
-By default, we use an in-memory database.
-
-If you want your database to be durable, you'll need to run a [Datomic Free](https://my.datomic.com/downloads/free) transactor, and set an environment variable:
-
-```sh
-export BRIDGE_DATOMIC_URI="datomic:free://localhost:4334/bridge"
+src/          Source code
+resources/    Static resources
+script/       Build scripts
+test/         Test files
+doc/          Documentation
 ```
-
-
-## Documentation
-
-- [Requirements](doc/requirements.md).
-- [Features](doc/system.md).
-- [Schema](doc/schema.md).
-
 
 ## License
 
-Copyright © Robert Stuttaford
-
-Distributed under the Eclipse Public License either version 1.0 or (at your option) any later version.
+This project is intended for educational and learning purposes.
